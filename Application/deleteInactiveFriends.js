@@ -21,7 +21,7 @@ var i = 0;
 while(i < friends.length)
 {
   var last_seen_time = friends[i].last_seen.time;
-  if (last_seen_time != null && (last_seen_time > 0) && (last_seen_time <= timebarier) && (friends[i].id > 50000000)) {
+  if (last_seen_time != null && (last_seen_time > 0) && (last_seen_time <= timebarier) && (friends[i].id > 30000000)) {
     API.friends.delete({ user_id: friends[i].id });
     deletedFriendsIds.push(friends[i].id);
   }
