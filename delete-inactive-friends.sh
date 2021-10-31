@@ -1,7 +1,8 @@
 #!/bin/bash
+set -e
 
 ACCESS_TOKEN=`cat access-token`
 
-curl "https://api.vk.com/method/execute.deleteInactiveFriends?access_token=${ACCESS_TOKEN}&v=5.131&offset=$1"
+./execute-or-fail.sh "https://api.vk.com/method/execute.deleteInactiveFriends?access_token=${ACCESS_TOKEN}&v=5.131&offset=$1"
 
-printf "\n"
+echo

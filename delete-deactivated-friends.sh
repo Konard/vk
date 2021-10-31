@@ -1,12 +1,9 @@
 #!/bin/bash
-
-ACCESS_TOKEN=`cat access-token`
+set -e
 
 while :
 do
-  curl "https://api.vk.com/method/execute.deleteFirstDeactivatedFriend?access_token=${ACCESS_TOKEN}&v=5.131"
-
-  printf "\n"
+  ./delete-first-deactivated-friend.sh
 
   sleep 2400
 done

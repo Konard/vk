@@ -1,12 +1,9 @@
 #!/bin/bash
-
-ACCESS_TOKEN=`cat access-token`
+set -e
 
 while :
 do
-  curl "https://api.vk.com/method/execute.acceptAllFriendRequests?access_token=${ACCESS_TOKEN}&v=5.131"
-
-  printf "\n"
+  ./accept-all-friend-requests-once.sh
 
   sleep 2400
 done

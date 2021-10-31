@@ -1,24 +1,15 @@
 #!/bin/bash
-
-ACCESS_TOKEN=`cat access-token`
+set -e
 
 ./handle-requests.sh
 
 while :
 do
-  echo "deleteFirstDeactivatedFriend:"
-
-  curl -s "https://api.vk.com/method/execute.deleteFirstDeactivatedFriend?access_token=${ACCESS_TOKEN}&v=5.131" | jq
-
-  echo
+  ./delete-first-deactivated-friend.sh
 
   sleep 600
 
-  echo "acceptAllFriendRequests:"
-
-  curl -s "https://api.vk.com/method/execute.acceptAllFriendRequests?access_token=${ACCESS_TOKEN}&v=5.131" | jq
-
-  echo
+  ./accept-all-friend-requests-once.sh
 
   sleep 600
 done
