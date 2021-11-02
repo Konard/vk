@@ -1,9 +1,26 @@
 # vk
 VK automation for personal auditory growth.
 
+# Warning
+
+DO NOT TRUST THIS SOFTWARE.
+
+READ THE CODE.
+
+BE CAREFUL TO
+NOT UPLOAD YOUR TOKENS OR CREDENTIALS
+TO THE REPOSITORY/PULL REQUEST.
+CHECK GITIGNORE FILE.
+
 # Setup
 
 1. Setup your own [backend application](Application/README.md).
+2. Install selenium (for automatic token refreshing).
+   ```
+   npm install -g selenium-side-runner
+   npm install -g chromedriver
+   ```
+3. Put your credentials in `email` and `pass` files (required to use automatic token refreshing).
 
 # Use
 

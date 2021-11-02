@@ -1,0 +1,121 @@
+{
+  "id": "e200311b-a1dc-43a3-a2c2-7cebe35eba04",
+  "version": "2.0",
+  "name": "vk_auth_token",
+  "url": "https://oauth.vk.com",
+  "tests": [{
+    "id": "943b4480-14c8-437a-8332-13ccf6b43be1",
+    "name": "vk_auth_token",
+    "commands": [{
+      "id": "e8f4b630-fe50-4013-af22-f082085907d8",
+      "comment": "",
+      "command": "open",
+      "target": "/authorize?client_id=7907795&scope=friends&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&revoke=1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32df52f8-d4f4-4561-8c41-661e167e6b4b",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.oauth_form_input:nth-child(8)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='login_submit']/div/div/input[7]", "xpath:idRelative"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "443edab8-87f6-4460-92ef-6bc7faf0a737",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.oauth_form_input:nth-child(8)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='login_submit']/div/div/input[7]", "xpath:idRelative"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": "email_placeholder"
+    }, {
+      "id": "397d7989-f943-43dc-a199-83cbb5710a99",
+      "comment": "",
+      "command": "click",
+      "target": "name=pass",
+      "targets": [
+        ["name=pass", "name"],
+        ["css=.oauth_form_input:nth-child(10)", "css:finder"],
+        ["xpath=//input[@name='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='login_submit']/div/div/input[8]", "xpath:idRelative"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b882f13b-373b-46e7-8d3f-96cab0315aea",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [
+        ["name=pass", "name"],
+        ["css=.oauth_form_input:nth-child(10)", "css:finder"],
+        ["xpath=//input[@name='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='login_submit']/div/div/input[8]", "xpath:idRelative"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": "pass_placeholder"
+    }, {
+      "id": "b42ce4bd-e11f-4300-b516-e81acdedc22a",
+      "comment": "",
+      "command": "click",
+      "target": "id=install_allow",
+      "targets": [
+        ["id=install_allow", "id"],
+        ["css=#install_allow", "css:finder"],
+        ["xpath=//button[@id='install_allow']", "xpath:attributes"],
+        ["xpath=//form[@id='login_submit']/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "951759de-0bde-4358-838c-d464cda1708d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button_indent",
+      "targets": [
+        ["css=.button_indent", "css:finder"],
+        ["xpath=//button[@onclick='return allow(this);']", "xpath:attributes"],
+        ["xpath=//div[@id='oauth_wrap_content']/div[3]/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Allow')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b33990e-de29-4596-ba79-98a62e03a2a9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "fbd3819d-8f58-4282-91d6-d8e86e194c44",
+      "comment": "",
+      "command": "echo",
+      "target": "${pageurl}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c17fba73-d42e-44d2-bfd7-46b22953d978",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["943b4480-14c8-437a-8332-13ccf6b43be1"]
+  }],
+  "urls": ["https://oauth.vk.com/"],
+  "plugins": []
+}
