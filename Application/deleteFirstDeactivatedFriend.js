@@ -1,11 +1,10 @@
-var currentUserId = API.users.get()[0].id;
 var friendsOffset = 0;
 var step = 5000;
 var operations = 2;
 var deletedFriendsIds = [];
 while(friendsOffset < 10000)
 {
-  var friends = API.friends.get({ user_id: currentUserId, offset: friendsOffset, fields: "photo_50" });
+  var friends = API.friends.get({ offset: friendsOffset, fields: "photo_50" });
   var photos = friends.items@.photo_50;
   var deactivatedIndex = photos.indexOf("https://vk.com/images/deactivated_50.png");
   while ((deactivatedIndex > 0) && (deletedFriendsIds.length < operations))
