@@ -1,5 +1,4 @@
 #!/bin/bash
-# set -e
 
 TOKEN_EXPIRED_ERROR_MESSAGE="User authorization failed: access_token has expired."
 TOKEN_WAS_GIVEN_TO_ANOTHER_IP_ERROR_MESSAGE="User authorization failed: access_token was given to another ip address."
