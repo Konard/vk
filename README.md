@@ -1,7 +1,7 @@
 # vk
 VK automation for personal auditory growth.
 
-# Warning
+# Warnings
 
 DO NOT TRUST THIS SOFTWARE.
 
