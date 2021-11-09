@@ -1,4 +1,3 @@
-var currentUserId = API.users.get()[0].id;
 var offsets = [
   0000,0250,0500,0750,
   1000,1250,1500,1750, // 8
@@ -16,7 +15,7 @@ var step = 250;
 var deletedFriendsIds = [];
 var timebarier = API.utils.getServerTime() - 518400; // 6 days less
 
-var friends = API.friends.get({ user_id: currentUserId, count: step, offset: friendsOffset, fields: "last_seen" }).items;
+var friends = API.friends.get({ count: step, offset: friendsOffset, fields: "last_seen" }).items;
 var i = 0;
 while(i < friends.length)
 {
