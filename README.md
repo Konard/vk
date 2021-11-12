@@ -14,13 +14,21 @@ CHECK GITIGNORE FILE.
 
 # Setup
 
-1. Setup your own [backend application](Application/README.md).
-2. Install selenium (for automatic token refreshing).
+1. Setup your own [backend application](Application/README.md), or _please do not_ use app with 7907795 id.
+2. Install jq
    ```
-   npm install -g selenium-side-runner
-   npm install -g chromedriver
+   sudo apt install jq
    ```
-3. Put your credentials in `email` and `pass` files (required to use automatic token refreshing).
+3. Install npm
+   ```
+   sudo apt install npm
+   ```
+4. Install selenium (for automatic token refreshing).
+   ```
+   sudo npm install -g selenium-side-runner
+   sudo npm install -g chromedriver
+   ```
+5. Put your credentials in `email` and `pass` files (required to use automatic token refreshing).
 
 # Use
 
