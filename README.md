@@ -26,7 +26,7 @@ CHECK GITIGNORE FILE.
 4. Install selenium (for automatic token refreshing).
    ```
    sudo npm install -g selenium-side-runner
-   sudo npm install -g chromedriver
+   sudo npm install -g chromedriver --unsafe-perm=true --allow-root
    ```
 5. Put your credentials in `email` and `pass` files (required to use automatic token refreshing).
 
