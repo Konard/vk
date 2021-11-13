@@ -5,9 +5,9 @@ var deletedFriendsIds = [];
 while(friendsOffset < 10000)
 {
   var friends = API.friends.get({ offset: friendsOffset });
-  var photos = friends.items@.deactivated;
-  var deactivatedIndex = photos.indexOf("banned");
-  deactivatedIndex = deactivatedIndex + photos.indexOf("deleted");
+  var dFriends = friends.items@.deactivated;
+  var deactivatedIndex = dFriends.indexOf("banned");
+  deactivatedIndex = deactivatedIndex + dFriends.indexOf("deleted");
   while ((deactivatedIndex > 0) && (deletedFriendsIds.length < operations)){
     var userIdToDelete = friends.items[deactivatedIndex].id;
     if (friends.items@.deactivated){
@@ -16,8 +16,8 @@ while(friendsOffset < 10000)
       if(deletedFriendsIds.length >= operations) {
         return "deleted friends: " + deletedFriendsIds;
       }
-      photos = friends.items.slice(deactivatedIndex);
-      photos = photos.slice(deactivatedIndex);
+      dFriends = friends.items.slice(deactivatedIndex);
+      dFriends = dFriends.slice(deactivatedIndex);
       friends.items = friends.items.slice(deactivatedIndex);
     }
   }
