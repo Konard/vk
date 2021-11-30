@@ -1,32 +1,24 @@
 var friendsOffset = 0;
 var step = 5000;
-var operations = 2;
+var deactivatedValues = ["banned", "deleted"];
+var i, deactivatedIndex, friendId;
 var deletedFriendsIds = [];
-while(friendsOffset < 10000)
+while (friendsOffset < 10000)
 {
-  var friends = API.friends.get({ offset: friendsOffset, fields: "photo_50" });
-  var photos = friends.items@.photo_50;
-  var deactivatedIndex = photos.indexOf("https://vk.com/images/deactivated_50.png");
-  while ((deactivatedIndex > 0) && (deletedFriendsIds.length < operations))
+  var friends = API.friends.get({ offset: friendsOffset, count: step, fields: "deactivated", order: "deactivated" }).items;
+  var deactivatedFields = friends@.deactivated;
+  i = 0;
+  while (i < deactivatedValues.length) 
   {
-    var userIdToDelete = friends.items[deactivatedIndex].id;
-    deletedFriendsIds.push(userIdToDelete);
-    API.friends.delete({ user_id: userIdToDelete });
-    if(deletedFriendsIds.length >= operations) 
+    deactivatedIndex = deactivatedFields.indexOf(deactivatedValues[i]);
+    if (deactivatedIndex > 0)
     {
-      return "deleted friends: " + deletedFriendsIds;
+      friendId = friends[deactivatedIndex].id;
+      deletedFriendsIds.push(friendId);
+      API.friends.delete({ user_id: friendId });
     }
-    friends.items = friends.items.slice(deactivatedIndex);
-    photos = photos.slice(deactivatedIndex);
-    deactivatedIndex = photos.indexOf("https://vk.com/images/deactivated_50.png");
+    i = i + 1;
   }
   friendsOffset = friendsOffset + step;
 }
-if(deletedFriendsIds.length <= 0) 
-{
-  return "no deactivated friends";
-}
-else
-{
-  return "deleted friends: " + deletedFriendsIds;
-}
+return "deleted friends: [" + deletedFriendsIds + "]";
