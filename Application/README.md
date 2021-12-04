@@ -1,6 +1,6 @@
 # VK Backend Application
 
-This is a backend application for VK. It contains stored functions for VK Automation to work. This is not js files, it is vkscript.
+This is a backend application for VK. It contains stored functions for VK Automation to work. These are not JS files, they are in VKScript.
 
 # Setup
 
