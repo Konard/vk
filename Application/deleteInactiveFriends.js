@@ -1,8 +1,9 @@
 var friendsLimit = 10000;
-var step = 150;
-var friendsOffset = friendsLimit - step * (Args.offset + 1);
-var timebarier = API.utils.getServerTime() - 518400; // 6 days less
+var step = 23;
+var timeDifference = 518400; // 6 days
+var friendsOffset = friendsLimit - step * (parseInt(Args.offset) + 1);
 var friends = API.friends.get({ count: step, offset: friendsOffset, fields: "last_seen" }).items;
+var timebarier = API.utils.getServerTime() - timeDifference;
 var i = 0;
 var deletedFriendsIds = [];
 while(i < friends.length)
