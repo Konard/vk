@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-i=$1
+i="$1"
 while [ $i -ne 433 ]
 do
   ./delete-inactive-friends.sh "$i"
