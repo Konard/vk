@@ -14,6 +14,10 @@ do
   
   echo "Inactive friends deletion is stopped."
   exit 0
+  
+  else
+  
+  echo "i = $i"
 
   fi
 done
