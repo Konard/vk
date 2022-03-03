@@ -12,7 +12,7 @@ do
   if [[ ! $REPLY =~ ^[Yy]$ ]]
   then
 
-  # nothing
+  ;
 
   else
   
