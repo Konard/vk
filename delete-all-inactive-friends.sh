@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-i=0
-while [ $i -ne 36 ]
+i=$1
+while [ $i -ne 433 ]
 do
   ./delete-inactive-friends.sh "$i"
   i=$(($i+1))
