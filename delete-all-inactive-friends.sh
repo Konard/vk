@@ -11,10 +11,6 @@ do
   echo
   if [[ ! $REPLY =~ ^[Yy]$ ]]
   then
-
-  echo "..."
-
-  else
   
   echo "Inactive friends deletion is stopped."
   exit 0
