@@ -12,7 +12,7 @@ do
   if [[ ! $REPLY =~ ^[Yy]$ ]]
   then
 
-  ;
+  echo "..."
 
   else
   
