@@ -1,6 +1,6 @@
 var friendsLimit = 10000;
 var step = 23;
-var timeDifference = 518400; // 6 days
+var timeDifference = 432000; // 5 days
 var friendsOffset = friendsLimit - step * (parseInt(Args.offset) + 1);
 var friends = API.friends.get({ count: step, offset: friendsOffset, fields: "last_seen" }).items;
 var timebarier = API.utils.getServerTime() - timeDifference;
