@@ -13,10 +13,10 @@ do
  
   read -p "Continue? [y / n] " -n 1 -r
   echo
+  echo
   if [[ ! $REPLY =~ ^[Yy]$ ]]
   then
   
-  echo
   echo "Inactive friends deletion is stopped."
   exit 0
 
