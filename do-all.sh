@@ -1,9 +1,11 @@
 #!/bin/bash
 set -e
 
-./handle-requests.sh
-
 ./delete-first-deactivated-friend.sh
+
+sleep 8
+
+./handle-requests.sh
 
 sleep 16
 
