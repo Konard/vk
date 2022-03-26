@@ -27,7 +27,7 @@ CHECK GITIGNORE FILE.
    ```
    sudo npm install -g selenium-side-runner
    ```
-5. Install Chrome driver (other browsers may be also used)
+5. Install Chrome driver (other browsers may be also used):
    ```
    sudo npm install -g chromedriver --unsafe-perm=true --allow-root
    ```
