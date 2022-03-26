@@ -26,8 +26,12 @@ CHECK GITIGNORE FILE.
 4. Install selenium (for automatic token refreshing):
    ```
    sudo npm install -g selenium-side-runner
+   ```
+5. Install Chrome driver (other browsers may be also used)
+   ```
    sudo npm install -g chromedriver --unsafe-perm=true --allow-root
    ```
+   Execute this command again for a new major version of the Chrome browser.
 
 # Use
 
