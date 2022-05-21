@@ -1,4 +1,4 @@
-var count = 50;
+var count = 35;
 var currentUserId = API.users.get()[0].id;
 var suggestions = API.friends.getSuggestions({ filter: "mutual", fields: "online,last_seen", count: count, offset: count * Args.offset }).items;
 var maxItem = [0, 0];
