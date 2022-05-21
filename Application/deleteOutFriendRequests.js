@@ -1,4 +1,4 @@
-var requests = API.friends.getRequests({ out: 1 }).items;
+var requests = API.friends.getRequests({ count: 23, out: 1 }).items;
 var i = 0;
 while(i < requests.length)
 {
