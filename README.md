@@ -25,6 +25,7 @@ CHECK GITIGNORE FILE.
    ```
    or using [nvm](https://github.com/nvm-sh/nvm).
 4. Install selenium (for automatic token refreshing):
+
    Without nvm:
    ```
    sudo npm install -g selenium-side-runner
@@ -34,6 +35,7 @@ CHECK GITIGNORE FILE.
    npm install -g selenium-side-runner
    ```
 5. Install Chrome driver (other browsers may be also used):
+
    Without nvm:
    ```
    sudo npm install -g chromedriver --unsafe-perm=true --allow-root
