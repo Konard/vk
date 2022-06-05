@@ -15,21 +15,32 @@ CHECK GITIGNORE FILE.
 # Setup
 
 1. Setup your own [backend application](Application/README.md), or _please do not_ use app with 7907795 id.
-2. Install jq:
+2. Install prerequisites:
    ```
-   sudo apt install jq
+   sudo apt install curl jq
    ```
 3. Install npm:
    ```
    sudo apt install npm
    ```
+   or using [nvm](https://github.com/nvm-sh/nvm).
 4. Install selenium (for automatic token refreshing):
+   Without nvm:
    ```
    sudo npm install -g selenium-side-runner
    ```
+   With nvm:
+   ```
+   npm install -g selenium-side-runner
+   ```
 5. Install Chrome driver (other browsers may be also used):
+   Without nvm:
    ```
    sudo npm install -g chromedriver --unsafe-perm=true --allow-root
+   ```
+   With nvm:
+   ```
+   npm install -g chromedriver --unsafe-perm=true --allow-root
    ```
    Execute this command again for a new major version of the Chrome browser.
 
