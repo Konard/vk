@@ -10,19 +10,6 @@ do
   echo
   
   i=$(($i+1))
- 
-  read -p "Continue? [y / n] " -n 1 -r
-  echo
-  if [[ ! $REPLY =~ ^[Yy]$ ]]
-  then
-  
-  echo ""
-  echo "Inactive friends deletion is stopped."
-  exit 0
-  
-  else
-  
-  echo ""
 
-  fi
+  sleep 1
 done
