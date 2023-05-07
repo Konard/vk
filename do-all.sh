@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
+./delete-out-friend-request.sh
+
+sleep 16
+
 ./delete-first-deactivated-friend.sh
-
-sleep 8
-
-./handle-requests.sh
 
 sleep 16
 
@@ -13,6 +13,10 @@ sleep 16
 
 while :
 do
+  sleep 600
+
+  ./delete-out-friend-request.sh
+
   sleep 600
 
   ./delete-first-deactivated-friend.sh
