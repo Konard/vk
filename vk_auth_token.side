@@ -17,11 +17,11 @@
       "id": "32df52f8-d4f4-4561-8c41-661e167e6b4b",
       "comment": "",
       "command": "click",
-      "target": "name=email",
+      "target": "name=login",
       "targets": [
-        ["name=email", "name"],
+        ["name=login", "name"],
         ["css=.oauth_form_input:nth-child(8)", "css:finder"],
-        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
         ["xpath=//form[@id='login_submit']/div/div/input[7]", "xpath:idRelative"],
         ["xpath=//input[7]", "xpath:position"]
       ],
@@ -30,11 +30,11 @@
       "id": "443edab8-87f6-4460-92ef-6bc7faf0a737",
       "comment": "",
       "command": "type",
-      "target": "name=email",
+      "target": "name=login",
       "targets": [
-        ["name=email", "name"],
+        ["name=login", "name"],
         ["css=.oauth_form_input:nth-child(8)", "css:finder"],
-        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
         ["xpath=//form[@id='login_submit']/div/div/input[7]", "xpath:idRelative"],
         ["xpath=//input[7]", "xpath:position"]
       ],
