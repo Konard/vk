@@ -5,12 +5,12 @@ var i, deactivatedIndex, friendId;
 var deletedFriendsIds = [];
 while (friendsOffset < 10000)
 {
-  var friends = API.friends.get({ offset: friendsOffset, count: step, fields: "deactivated", order: "deactivated" }).items;
-  var deactivatedFields = friends@.deactivated;
+  var friends = API.friends.get({ offset: friendsOffset, count: step, fields: "deactivated" }).items;
+  var deactivatedField = friends@.deactivated;
   i = 0;
   while (i < deactivatedValues.length) 
   {
-    deactivatedIndex = deactivatedFields.indexOf(deactivatedValues[i]);
+    deactivatedIndex = deactivatedField.indexOf(deactivatedValues[i]);
     if (deactivatedIndex > 0)
     {
       friendId = friends[deactivatedIndex].id;
